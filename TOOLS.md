@@ -13,19 +13,19 @@
 ## 🛠 스킬 목록
 
 #스킬목록
-##[NO.01][server-info][skills/server-info.md]
+## [NO.01] server-info — `skills/server-info.md`
 - 서버 기본 정보 (IP, OS, 드라이브 등)
-##[NO.02][flask-server][skills/flask_server.md]
+## [NO.02] flask-server — `skills/flask_server.md`
 - Flask 파일 서버 (5050번 포트, 외부 노출, Cloudflare Tunnel)
-##[NO.03][webdav-server][skills/webdav_server.md]
+## [NO.03] webdav-server — `skills/webdav_server.md`
 - WsgiDAV WebDAV (8080번 포트, 내부망 전용, ⛔ 건드리지 말 것)
-##[NO.04][git-office][skills/git-office.md]
+## [NO.04] git-office — `skills/git-office.md`
 - GitHub `office_server` Push / Pull
-##[NO.05][cloudflare-tunnel][skills/cloudflare-tunnel.md]
+## [NO.05] cloudflare-tunnel — `skills/cloudflare-tunnel.md`
 - Cloudflare Tunnel (files.semonara.com → localhost:5050)
-##[NO.06][tel-send][skills/tel-send.md]
+## [NO.06] tel-send — `skills/tel-send.md`
 - 프로젝트 문서 → 텔레그램 직접 전송 (AI 개입 없음)
-##[NO.07][office-agent-sync][skills/office-agent-sync.md]
+## [NO.07] office-agent-sync — `skills/office-agent-sync.md`
 - 에이전트 워크스페이스 ↔ GitHub office-server-agent 동기화
 
 ---
