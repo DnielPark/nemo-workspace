@@ -1,0 +1,22 @@
+# 민감 정보
+MEMORY.md
+memory/
+
+# OpenClaw 내부 상태
+.openclaw/workspace-state.json
+
+# 임시/자동생성 스크립트
+_check.ps1
+_undel.ps1
+_*.ps1
+_*.py
+query
+
+# 인증/토큰
+auth-profiles.json
+credentials.json
+*.token
+
+# OS
+Thumbs.db
+.DS_Store
