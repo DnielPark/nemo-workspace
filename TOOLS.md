@@ -25,6 +25,8 @@
 - Cloudflare Tunnel (files.semonara.com → localhost:5050)
 ##[NO.06][tel-send][skills/tel-send.md]
 - 프로젝트 문서 → 텔레그램 직접 전송 (AI 개입 없음)
+##[NO.07][office-agent-sync][skills/office-agent-sync.md]
+- 에이전트 워크스페이스 ↔ GitHub office-server-agent 동기화
 
 ---
 
