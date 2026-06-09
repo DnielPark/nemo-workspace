@@ -27,6 +27,10 @@
 - 프로젝트 문서 → 텔레그램 직접 전송 (AI 개입 없음)
 ## [NO.07] office-agent-sync — `skills/office-agent-sync.md`
 - 에이전트 워크스페이스 ↔ GitHub office-server-agent 동기화
+## [NO.08] doc-builder — `skills/doc_builder.md`
+- files.semonara.com 문서 생성기 (일요일 공사 승인 요청서)
+- 3단계 프로세스: auto → ask → ai_generate
+- 템플릿+JSON 구조, 문서 종류별 폴더
 
 ---
 
