@@ -19,24 +19,38 @@ python file_server_external.py
 
 ## .env 설정
 
+> ⚠️ 공구별 비밀번호는 **각 공구 사용자가 직접 관리/변경**한다. 네모가 임의로 바꾸지 않는다.
+> 아래는 현재 `.env`에 기록된 값이며, 수동 동기화 필요 시 업데이트한다.
+
 `E:\project\.env`:
 ```
-SUNGSAN1_PW=000000
+SUNGSAN1_PW='000000'
 SUNGSAN2_PW=000000
-GUDONG1_PW=000000
-GUDONG2_PW=000000
+GUDONG1_PW='123401'
+GUDONG2_PW='112233'
 
-# SMTP (로컬 폴더 이메일 인증)
+SECRET_KEY=baf9842c68d6bc88b64fcf4ccba7349eba5623f03b4875e2f7e3616b846502ae
+
+# GitHub PAT
+GITHUB_TOKEN=ghp_…
+
+# ── 로컬 폴더 이메일 인증 ─────────────────
+LOCAL_DOMAIN=https://files.semonara.com
+
+# SMTP 설정 (네이트 메일)
 SMTP_HOST=smtp.mail.nate.com
 SMTP_PORT=587
 SMTP_SSL=False
 SMTP_USER=daeho1001
 SMTP_PASS=
 SMTP_FROM=daeho1001@nate.com
-ADMIN_EMAIL=daeho1001@nate.com
-```
 
-> ⚠️ 현재 비밀번호 모두 000000 — 보안 강화 필요 시 변경
+# 관리자 이메일 (로컬 폴더 토큰 관리자 페이지 접근 가능)
+ADMIN_EMAIL=daeho1001@nate.com
+
+# 공구별 최대 용량 (GB)
+PROJECT_MAX_SIZE_GB=100
+```
 
 ## 로컬 폴더 인증
 - 이메일 인증 → 토큰 발급 방식

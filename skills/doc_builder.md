@@ -11,17 +11,17 @@
 
 | 문서 | 경로 | 상태 |
 |------|------|------|
-| 일요일 공사 승인 요청서 | `templates/doc_builder/sunday_chat.html` | ✅ Phase 2 (작업중) |
+| 일요일 공사 승인 요청서 | `templates/doc_builder/sunday_approval/` | ✅ Phase 2-v3 (3단계 프로세스) |
 | Kimi K2.5 OCR 연동 계획 | `templates/doc_builder/phase3_plan.html` | 📝 초안 |
 
 ## 백엔드
 
 - **Flask:** `E:\project\file_server_external.py`
-- **AI 연동:** DeepSeek (`deepseek-chat` 모델 → V4로 업그레이드 필요)
+- **AI 연동:** DeepSeek (`deepseek-chat` → V4 업그레이드 예정)
 - **API 엔드포인트:**
   - `GET /devnote/doc-builder` — 문서 목록
   - `GET /devnote/doc-builder/sunday` — 일요일 공사 승인 요청서 페이지
-  - `POST /devnote/doc-builder/sunday/chat` — AI 채팅 API
+  - `POST /devnote/doc-builder/sunday/chat` — AI 채팅 API (phase 파라미터 지원)
 
 ---
 
@@ -31,18 +31,19 @@
 
 ```
 doc_builder/
-├── templates/
-│   └── sunday_approval/          ← 문서 종류별 폴더
-│       ├── template.html         ← A4 미리보기 HTML
-│       ├── schema.json           ← 필드 정의
-│       └── fields/
-│           └── default.json      ← 실제 데이터
-├── users/
-│   └── default.json              ← 유저 정보
 ├── index.html                    ← 문서 목록
-└── shared/
-    └── styles.css
+├── phase3_plan.html              ← Phase 3 계획
+├── static/
+│   └── sunday_work_approval_schema.json
+└── sunday_approval/              ← 📦 문서 패키지 (하나의 hwp와 같은 단위)
+    ├── template.html             ← A4 미리보기 HTML
+    ├── schema.json               ← 필드 정의 (types, process phases)
+    ├── chat.html                 ← 채팅 인터페이스 (sunday_chat.html에서 이관)
+    └── fields/
+        └── default.json          ← 실제 데이터 저장소
 ```
+
+**문서 패키지 개념:** `sunday_approval/` 폴더 하나가 완전한 한 세트. 추후 새 문서 추가 시 같은 패턴으로 `work_report/`, `safety_report/` 등 확장.
 
 **DB 안 쓰는 이유:** Flask 파일 서버 환경 최적화. JSON으로 충분. DB는 검색/통계/동시편집 필요할 때 전환.
 
