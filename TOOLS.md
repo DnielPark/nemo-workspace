@@ -31,6 +31,11 @@
 - files.semonara.com 문서 생성기 (일요일 공사 승인 요청서)
 - 3단계 프로세스: auto → ask → ai_generate
 - 템플릿+JSON 구조, 문서 종류별 폴더
+## [NO.09] home-server-agent — `skills/home-server-agent.md`
+- 대니얼 집 리눅스 서버 (라이젠 4000, 16GB)
+- 아들(18789) + 언론사 사이트 + 게임 서버와 무관한 별도 OpenClaw 인스턴스
+- 목표: 동생 게이트웨이(18790) 설치
+- ⛔ 기존 서비스 절대 건드리지 말 것
 
 ---
 
