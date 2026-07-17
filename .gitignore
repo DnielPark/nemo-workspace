@@ -13,8 +13,7 @@ auth-profiles.json
 credentials.json
 *.token
 
-# 메모리/민감 정보
-MEMORY.md
+# 일별 기록 (USB 보관)
 memory/
 
 # 환경 변수 / 설정
